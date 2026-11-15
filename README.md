@@ -1,4 +1,4 @@
-# Jobbklar-Uke42
+# IT-systemer, systemarkitektur, nettverk, skytjenester og sikkerhet
 
 Oppgave 1 – Analyser et IT-system
 1. Hvilket IT-system har jeg valgt?
