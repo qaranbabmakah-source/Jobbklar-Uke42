@@ -1,4 +1,6 @@
-# IT-systemer, systemarkitektur, nettverk, skytjenester og sikkerhet
+# Analyse og utvikling av IT-løsninger – Fra teori til praksis
+
+DEL-1. IT-SYSTEMER, SYSTEMARKITEKTUR, NETTVERK OG SIKKERHET
 
 Oppgave 1 – Analyser et IT-system
 1. Hvilket IT-system har jeg valgt?
@@ -110,7 +112,62 @@ Hvorfor bør ikke nettleseren ha fri tilgang til databasen?
 
 Fri tilgang kan gjøre det mulig å lese, endre eller slette opplysninger uten lov. Elever og karakterer må beskyttes. Derfor bør forespørsler gå gjennom applikasjonslaget, som kontrollerer hvem brukeren er, hva brukeren har lov til å gjøre, og om opplysningene er gyldige.
 
-Skyarkitektur og distribuerte systemer.
+
+
+
+DEL-2 SYSTEMARKITEKTUR FOR ET KOMMUNALT TIMEBESTILLINGSSYSTEM
+
+
+
+Foreslå en egnet systemarkitektur.
+
+Jeg foreslår et digitalt system med seks komponenter: innbygger, webserver, applikasjonsserver, database, innloggingstjeneste og varslingstjeneste.
+
+Innbyggeren bruker en mobil eller PC for å bestille time. Webserveren mottar forespørselen, og applikasjonsserveren behandler bestillingen. Databasen lagrer informasjon om timer og brukere. Innloggingstjenesten kontrollerer hvem brukeren er, og varslingstjenesten sender bekreftelser på SMS eller e-post. 
+
+ Arkitekturdiagram.
+
+<img width="466" height="514" alt="Untitled Diagram-Page-1 drawio" src="https://github.com/user-attachments/assets/f40f1dd2-4ded-44a6-906f-6b06c2b0bea1" />
+
+
+Jeg har laget et arkitekturdiagram som viser de viktigste komponentene i systemet og hvordan de kommuniserer med hverandre.
+Diagrammet har seks komponenter og viser hvordan en innbygger kan bestille, endre eller avbestille en time.
+
+Diagrammet viser seks deler:
+
+Innbygger: Bruker mobil eller PC til å bestille og endre timer.
+
+Webserver: Viser nettsiden og sender forespørsler videre.
+
+Applikasjonsserver: Behandler bestillinger og sjekker ledige timer.
+
+Database: Lagrer bestillinger og nødvendige personopplysninger.
+
+Innloggingstjeneste: Kontrollerer hvem brukeren er.
+
+Varslingstjeneste: Sender bekreftelser på SMS eller e-post.
+
+Dataflyt ved en bestilling.
+
+Først åpner innbyggeren nettsiden og logger inn. Systemet henter ledige timer fra databasen. Innbyggeren velger en time og trykker på «Bestill».
+Applikasjonsserveren sjekker at timen fortsatt er ledig og lagrer bestillingen. Kontrollen og lagringen må hindre at to personer får samme time. Innbyggeren får bekreftelse på nettsiden og på SMS eller e-post.
+
+Ved endring eller avbestilling kontrollerer systemet at bestillingen tilhører brukeren. Databasen oppdateres, og en ny bekreftelse sendes.
+
+Nettverksprotokoller og grensesnitt.
+
+HTTPS beskytter informasjonen mellom nettleseren og webserveren ved å kryptere trafikken.
+
+HTTPS kan brukes mellom webserveren og applikasjonsserveren. Et API lar delene utveksle informasjon, for eksempel ledige timer.
+
+Lokal drift og skybasert drift.
+
+Ved lokal drift har kommunen egne servere. Kommunen får stor kontroll, men må selv sørge for utstyr, vedlikehold, sikkerhet og nok kapasitet.
+Ved skybasert drift kjører systemet hos en leverandør. Det er enklere å øke kapasiteten når mange bruker tjenesten. Samtidig blir kommunen avhengig av internett og leverandøren, og kostnadene kan øke med bruken.
+
+
+
+
 
 
 
