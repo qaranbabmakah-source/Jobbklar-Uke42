@@ -1,4 +1,4 @@
-# Skolearbeid-Jobbklar-Uke42
+# Jobbklar-Uke42
 
 Oppgave 1 – Analyser et IT-system
 1. Hvilket IT-system har jeg valgt?
